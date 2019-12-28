@@ -53,10 +53,10 @@ public class FragmentTwo extends Fragment {
 
         // 첫 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.screenshot_1577422826),
-                "Photo1") ;
+                "Photo1",R.drawable.screenshot_1577422826) ;
         // 두 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.screenshot_1577425991),
-                "Photo2") ;
+                "Photo2",R.drawable.screenshot_1577425991) ;
 
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -67,9 +67,11 @@ public class FragmentTwo extends Fragment {
 
                 String titleStr = item.getTitle() ;
                 Drawable iconDrawable = item.getIcon() ;
+                int iconContext=item.getContext();
 
-                Intent intent = new Intent(getActivity().getApplicationContext(), PhotozoomActivity.class);
-                Bitmap sendBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.screenshot_1577425991);
+                Intent intent = new Intent(getActivity(), PhotozoomActivity.class);
+
+                Bitmap sendBitmap = BitmapFactory.decodeResource(getResources(),iconContext);
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 sendBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
                 byte[] byteArray = stream.toByteArray();
