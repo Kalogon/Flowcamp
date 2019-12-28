@@ -7,3 +7,7 @@ git: https://code-giraffe.tistory.com/8
 java: https://itlove.tistory.com/355
 
 https://lktprogrammer.tistory.com/188
+
+https://slproweb.com/products/Win32OpenSSL.html
+
+https://webnautes.tistory.com/1319
