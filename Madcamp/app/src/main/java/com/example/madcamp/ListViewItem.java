@@ -1,4 +1,4 @@
-package com.example.madcamp_1;
+package com.example.madcamp;
 import android.graphics.drawable.Drawable;
 
 public class ListViewItem {
