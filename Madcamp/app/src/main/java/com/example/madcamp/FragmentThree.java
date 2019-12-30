@@ -24,5 +24,6 @@ public class FragmentThree extends Fragment {
         mapViewContainer.addView(mapView);
 
         return view;
+
     }
 }
