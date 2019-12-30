@@ -21,7 +21,7 @@ import com.kakao.usermgmt.callback.LogoutResponseCallback;
 public class MainActivity2 extends AppCompatActivity implements View.OnClickListener {
 
 
-    String strNickname, strProfile;
+    String strNickname, strProfile,strthumbnail;
 
 
 
@@ -40,7 +40,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
         Intent intent = getIntent();
         strNickname = intent.getStringExtra("name");
-        /*strProfile = intent.getStringExtra("profile");*/
+        strProfile = intent.getStringExtra("profile");
+        /*strthumbnail= intent.getStringExtra("thumbnail");*/
         tb.setTitle(strNickname);
         /*tvNickname.setText(strNickname);
         tvProfile.setText(strProfile);*/
@@ -72,8 +73,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
                 });
                 break;
             case R.id.menu_account:
-                break;
-            case R.id.menu_search:
+                Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+                startActivity(intent);
                 break;
         }
         return true;

@@ -30,4 +30,5 @@ dependencies {
     implementation files('libs\\libDaumMapAndroid.jar')
     implementation 'com.google.android.gms:play-services-location:17.0.0'
     api group: 'com.kakao.sdk', name: 'usermgmt', version: '1.14.0'
+    implementation 'org.jetbrains:annotations-java5:15.0'
 }
