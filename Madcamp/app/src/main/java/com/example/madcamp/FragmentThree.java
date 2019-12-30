@@ -10,18 +10,18 @@ import androidx.fragment.app.Fragment;
 
 import com.example.madcamp.R;
 
-import net.daum.mf.map.api.MapView;
+//import net.daum.mf.map.api.MapView;
 
 public class FragmentThree extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.mapview,container,false);
+        View view=inflater.inflate(R.layout.frag_layout_3,container,false);
 
-        MapView mapView = new MapView(this.getActivity());
+        /*MapView mapView = new MapView(this.getActivity());
 
         ViewGroup mapViewContainer = (ViewGroup) view.findViewById(R.id.map_view);
-        mapViewContainer.addView(mapView);
+        mapViewContainer.addView(mapView);*/
 
         return view;
 
