@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FF9F6c">
 
     <ImageView
         android:id="@+id/imageView1"
@@ -13,16 +14,19 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="4">
+        android:layout_weight="4"
+        >
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/textView1"
-            android:textSize="24dp"
-            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textColor="#714F3C"
             android:gravity="center_vertical"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
             android:layout_weight="2" />
 
     </LinearLayout>
