@@ -11,45 +11,52 @@
     <FrameLayout
         android:id="@+id/frag_container_"
         android:layout_width="match_parent"
-        android:layout_height="554dp">
+        android:layout_height="514dp">
+
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="450dp"
-            android:layout_marginLeft="140dp"
-            android:textSize="25sp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="380dp"
+            android:text="MADCAMP"
             android:textColor="#714F3C"
-            android:text="MADCAMP" />
+            android:textSize="25sp" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
+            android:layout_height="445dp"
             android:layout_marginLeft="0dp"
-            android:src="@drawable/firepicture"/>
+            android:layout_marginTop="0dp"
+            android:src="@drawable/firepicture" />
 
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="0dp"
+        >
+
         <Button
             android:id="@+id/btn_frag1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:background="#82533B"
+            android:gravity="center"
+            android:text="연락처"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:text="연락처"/>
+            android:textSize="20sp" />
+
         <Button
             android:id="@+id/btn_frag2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
             android:layout_weight="1"
             android:background="#714F3C"
             android:textColor="#FFFFFF"
@@ -59,6 +66,7 @@
             android:id="@+id/btn_frag3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
             android:layout_weight="1"
             android:background="#82533B"
             android:textColor="#FFFFFF"
