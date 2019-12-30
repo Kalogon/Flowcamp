@@ -41,7 +41,7 @@ public class FragmentOne extends Fragment {
                     case R.id.btnAddress:
 
                         dataList = new ArrayList<Phonenumber>();
-                        Cursor c = ((MainActivity)getActivity()).getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,
+                        Cursor c = ((MainActivity2)getActivity()).getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,
                                 null, null, null,
                                 ContactsContract.Contacts.DISPLAY_NAME_PRIMARY + " asc");
 
@@ -54,7 +54,7 @@ public class FragmentOne extends Fragment {
                             String number;
 
                             // ID로 전화 정보 조회
-                            Cursor phoneCursor = ((MainActivity)getActivity()).getContentResolver().query(
+                            Cursor phoneCursor = ((MainActivity2)getActivity()).getContentResolver().query(
                                     ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                                     null,
                                     ContactsContract.CommonDataKinds.Phone.CONTACT_ID + " = " + id,
