@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FF9F6c"
+    android:background="#FFFFFF"
     >
 
     <androidx.appcompat.widget.Toolbar
@@ -21,23 +21,12 @@
         android:layout_width="match_parent"
         android:layout_height="514dp">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="130dp"
-            android:layout_marginTop="380dp"
-            android:text="MADCAMP"
-            android:textColor="#714F3C"
-            android:textSize="25sp" />
-
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="445dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:src="@drawable/firepicture" />
+            android:layout_width="579dp"
+            android:layout_height="621dp"
+            android:layout_marginLeft="-105dp"
+            android:src="@drawable/backgroung_image" />
 
     </FrameLayout>
 
@@ -54,7 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_weight="1"
-            android:background="#82533B"
+            android:background="#FF8174"
             android:gravity="center"
             android:text="연락처"
             android:textColor="#FFFFFF"
@@ -66,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_weight="1"
-            android:background="#714F3C"
+            android:background="#FF5151"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:text="갤러리"/>
@@ -76,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_weight="1"
-            android:background="#82533B"
+            android:background="#FF8174"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
             android:text="지도"/>

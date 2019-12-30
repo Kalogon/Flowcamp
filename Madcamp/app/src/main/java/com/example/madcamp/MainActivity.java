@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                     intent.putExtra("name", result.getNickname());
                     intent.putExtra("profile", result.getProfileImagePath());
+                    intent.putExtra("thumbnail", result.getThumbnailImagePath());
                     startActivity(intent);
                     finish();
                 }
