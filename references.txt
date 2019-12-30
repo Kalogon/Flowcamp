@@ -11,5 +11,3 @@ https://lktprogrammer.tistory.com/188
 https://slproweb.com/products/Win32OpenSSL.html
 
 https://webnautes.tistory.com/1319
-
-test
