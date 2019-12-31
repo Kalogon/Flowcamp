@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.bumptech.glide.util.Util;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 
@@ -40,6 +41,7 @@ public class FragmentThree extends Fragment {
     TextView btnCurrentPositionInfo;
     // 지도 구현
     private MapView mapView;
+    private Context mContext;
 
     public double longitude; //경도
     public double latitude; //위도
@@ -78,6 +80,11 @@ public class FragmentThree extends Fragment {
 
         return view;
 
+    }
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mContext = context;
     }
     public void initView(View v) {
 
@@ -123,7 +130,7 @@ public class FragmentThree extends Fragment {
     }
     public void initSet() {
 
-        FusedLocationProviderClient mFusedLocationClient = LocationServices.getFusedLocationProviderClient(getContext());
+        FusedLocationProviderClient mFusedLocationClient = LocationServices.getFusedLocationProviderClient(mContext);
 
     }
 
@@ -246,7 +253,7 @@ public class FragmentThree extends Fragment {
             //Network 위치제공자에 의한 위치변화
             //Network 위치는 Gps에 비해 정확도가 많이 떨어진다.
 
-            currentLocation = /*Util.*/getCompleteAddressString(getContext(), latitude, longitude);
+            currentLocation = getCompleteAddressString(mContext, latitude, longitude);
 
 //            txtCurrentMoney.setText("위치정보 : " + provider + "\n위도 : " + longitude + "\n경도 : " + latitude
 //                    + "\n고도 : " + altitude + "\n정확도 : "  + accuracy);
@@ -277,6 +284,8 @@ public class FragmentThree extends Fragment {
         }
     };
 }
+
+
 /*mEditTextQuery = (EditText) findViewById(R.id.editTextQuery); // 검색창
         mButtonSearch = (Button) findViewById(R.id.buttonSearch); // 검색버튼
         mButtonSearch.setOnClickListener(new OnClickListener() { // 검색버튼 클릭 이벤트 리스너
