@@ -27,7 +27,7 @@ public class PhotozoomActivity extends AppCompatActivity implements View.OnClick
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        tb.setBackgroundColor(Color.rgb(255,81,81));
+        tb.setBackgroundColor(Color.rgb(255,177,0));
         /*ActionBar actionBar = getSupportActionBar();
         //메뉴바에 '<' 버튼이 생긴다.(두개는 항상 같이다닌다)
         actionBar.setDisplayHomeAsUpEnabled(true);

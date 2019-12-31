@@ -105,7 +105,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         strBirthday = intent.getStringExtra("birthday");*/
 
         tb.setTitle(strNickname);
-        tb.setBackgroundColor(Color.rgb(255,81,81));
+        tb.setBackgroundColor(Color.rgb(255,177,0));
         /*tvNickname.setText(strNickname);
         tvProfile.setText(strProfile);*/
 
