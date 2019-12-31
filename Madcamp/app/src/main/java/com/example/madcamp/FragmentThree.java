@@ -1,6 +1,7 @@
 package com.example.madcamp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,11 +54,23 @@ public class FragmentThree extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.mapview,container,false);
+        Button button=(Button)view.findViewById(R.id.button);
+
+
         initView(view);
         setLocation();
         initSet();
         setListener();
-
+        button.setOnClickListener(new View.OnClickListener() {
+                                      @Override
+                                      public void onClick(View v) {
+                                          Intent intent = new Intent(getContext(), weatherActivity.class);
+                                          intent.putExtra("latitude", latitude);
+                                          intent.putExtra("longitude", longitude);
+// Activity 시작
+                                          startActivity(intent);
+                                      }
+                                  });
        /*MapView mapView = new MapView(this.getActivity());
         ViewGroup mapViewContainer = (ViewGroup) view.findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
@@ -74,6 +88,11 @@ public class FragmentThree extends Fragment {
         // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
         marker.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin);
         mapView.addPOIItem(marker);*/
+
+        //Intent intent= new Intent(getContext(), weatherActivity.class);
+
+// putExtra("넘길변수명", 넘기는 int값)
+
 
 
         return view;

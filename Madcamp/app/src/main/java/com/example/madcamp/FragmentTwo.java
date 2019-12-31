@@ -1,35 +1,21 @@
 package com.example.madcamp;
 
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-import com.example.madcamp.R;
-
 import java.io.ByteArrayOutputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
-
-
-import com.example.madcamp.R;
 
 public class FragmentTwo extends Fragment {
     private ListView listview ;
@@ -52,12 +38,35 @@ public class FragmentTwo extends Fragment {
 
 
         // 첫 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.screenshot_1577422826),
-                "Photo1",R.drawable.screenshot_1577422826) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.niniz1),
+                "울고있는 앙몬드","content",R.drawable.niniz1) ;
         // 두 번째 아이템 추가.
-        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.screenshot_1577425991),
-                "Photo2",R.drawable.screenshot_1577425991) ;
-
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic1),
+                "애교부리는 라이언","content",R.drawable.g_pic1) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic2),
+                "공부하는 라이언","content",R.drawable.g_pic2) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic3),
+                "베이비 어피치","content",R.drawable.g_pic3) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic4),
+                "신난 앙몬드","content",R.drawable.g_pic4) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic5),
+                "코니와 무지","content",R.drawable.g_pic5) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic6),
+                "뿌듯한 스카피","content",R.drawable.g_pic6) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic7),
+                "배고픈 스카피","content",R.drawable.g_pic7) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic8),
+                "튜브와 어피치","content",R.drawable.g_pic8) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic9),
+                "카카오 친구들","content",R.drawable.g_pic9) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic10),
+                "유혹하는 라이언","content",R.drawable.g_pic10) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic11),
+                "떨떠름한 튜브","content",R.drawable.g_pic11) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic12),
+                "튜브 괴롭히는 어피치","content",R.drawable.g_pic12) ;
+        adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic13),
+                "꽃을 든 튜브","content",R.drawable.g_pic13) ;
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -66,6 +75,7 @@ public class FragmentTwo extends Fragment {
                 ListViewItem item = (ListViewItem) parent.getItemAtPosition(position) ;
 
                 String titleStr = item.getTitle() ;
+                String conStr=item.getCon();
                 Drawable iconDrawable = item.getIcon() ;
                 int iconContext=item.getContext();
 
