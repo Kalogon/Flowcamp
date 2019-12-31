@@ -32,7 +32,7 @@ public class MainActivity3 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        tb.setBackgroundColor(Color.rgb(255,81,81));
+        tb.setBackgroundColor(Color.rgb(255,177,0));
 
 
         TextView ivNickname = findViewById(R.id.ivNickname);
