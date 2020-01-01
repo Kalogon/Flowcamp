@@ -54,6 +54,10 @@ public class FragmentOne extends Fragment {
             String id = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
             // 연락처 대표 이름
             String name = c.getString(c.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME_PRIMARY));
+            String photo_id = c.getString(c.getColumnIndex(ContactsContract.Contacts.PHOTO_ID));
+            String photo_thum_id = c.getString(c.getColumnIndex(ContactsContract.Contacts.PHOTO_THUMBNAIL_URI));
+            String person_id = c.getString(c.getColumnIndex(ContactsContract.Contacts._ID));
+            String photo_url = c.getString(c.getColumnIndex(ContactsContract.Contacts.PHOTO_URI));
             String number;
 
             // ID로 전화 정보 조회
@@ -72,7 +76,7 @@ public class FragmentOne extends Fragment {
             else{
                 number="None";
             }
-            Phonenumber p = new Phonenumber(name,number);
+            Phonenumber p = new Phonenumber(name,number, photo_id, photo_thum_id, person_id,photo_url );
             phoneCursor.close();
             dataList.add(p);
         }// end while
@@ -84,15 +88,16 @@ public class FragmentOne extends Fragment {
         });
         c.close();
 
-        RecyclerAdapter adapter = new RecyclerAdapter();
+        RecyclerAdapter adapter = new RecyclerAdapter(getContext(),dataList);
         mRecyclerView.setAdapter(adapter);
-        for(Phonenumber p:dataList){
-           adapter.addItem(p);
-        }
         adapter.notifyDataSetChanged();
 
 
         return view;
     }
+
+
+
+
 }
 
