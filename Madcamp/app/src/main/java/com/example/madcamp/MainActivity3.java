@@ -8,6 +8,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,7 +19,9 @@ import com.bumptech.glide.request.RequestOptions;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
 
-public class MainActivity3 extends AppCompatActivity {
+import org.jetbrains.annotations.NotNull;
+
+public class MainActivity3 extends AppCompatActivity implements View.OnClickListener{
 
     String strNickname, strProfile, strEmail, strAgeRange, strGender, strBirthday;
 
@@ -50,26 +53,12 @@ public class MainActivity3 extends AppCompatActivity {
         strGender = intent.getStringExtra("gender");
         strBirthday = intent.getStringExtra("birthday");
 
+        findViewById(R.id.btnLogout).setOnClickListener(this);
         ivNickname.setText(strNickname);
         Glide.with(this).load(strProfile)
                 .apply(RequestOptions.circleCropTransform())
                 .into(ivProfile);
 
-
-
-        /*tvEmail.setText(strEmail);
-        tvAgeRange.setText(strAgeRange);
-        tvGender.setText(strGender);
-        tvBirthday.setText(strBirthday);*/
-        /*TextView tvNickname = findViewById(R.id.tvNickname);
-        TextView tvProfile = findViewById(R.id.tvProfile);
-
-        Intent intent = getIntent();
-        strNickname = intent.getStringExtra("name");
-        strProfile = intent.getStringExtra("profile");
-
-        tvNickname.setText(strNickname);
-        tvProfile.setText(strProfile);*/
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.account, menu);
@@ -88,12 +77,29 @@ public class MainActivity3 extends AppCompatActivity {
                     }
                 });
                 break;
-            case android.R.id.home:{ //toolbar의 back키 눌렀을 때 동작
+            case android.R.id.home: { //toolbar의 back키 눌렀을 때 동작
                 finish();
                 break;
             }
 
         }
         return true;
+    }
+
+    @Override
+    public void onClick(@NotNull View v) {
+        switch (v.getId()) {
+            case R.id.btnLogout:
+                Toast.makeText(getApplicationContext(), "정상적으로 로그아웃되었습니다.", Toast.LENGTH_SHORT).show();
+                UserManagement.getInstance().requestLogout(new LogoutResponseCallback() {
+                    @Override
+                    public void onCompleteLogout() {
+                        Intent intent = new Intent(MainActivity3.this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
+                });
+                break;
+        }
     }
 }
