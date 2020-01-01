@@ -115,13 +115,9 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         /*tvNickname.setText(strNickname);
         tvProfile.setText(strProfile);*/
 
-
-
         findViewById(R.id.btn_frag1).setOnClickListener(this);
         findViewById(R.id.btn_frag2).setOnClickListener(this);
         findViewById(R.id.btn_frag3).setOnClickListener(this);
-
-
     }
 
     @Override

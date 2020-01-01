@@ -14,12 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.bumptech.glide.util.Util;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 
@@ -64,15 +62,15 @@ public class FragmentThree extends Fragment {
         initSet();
         setListener();
         button.setOnClickListener(new View.OnClickListener() {
-                                      @Override
-                                      public void onClick(View v) {
-                                          Intent intent = new Intent(getContext(), weatherActivity.class);
-                                          intent.putExtra("latitude", latitude);
-                                          intent.putExtra("longitude", longitude);
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), weatherActivity.class);
+                intent.putExtra("latitude", latitude);
+                intent.putExtra("longitude", longitude);
 // Activity 시작
-                                          startActivity(intent);
-                                      }
-                                  });
+                startActivity(intent);
+            }
+        });
        /*MapView mapView = new MapView(this.getActivity());
         ViewGroup mapViewContainer = (ViewGroup) view.findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
@@ -157,7 +155,7 @@ public class FragmentThree extends Fragment {
 
         try {
 
-            txtCurrentPositionInfo.setText("수신중..");
+            //txtCurrentPositionInfo.setText("수신중..");
             // GPS 제공자의 정보가 바뀌면 콜백하도록 리스너 등록하기~!!!
             lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, // 등록할 위치제공자
                     100, // 통지사이의 최소 시간간격 (miliSecond)
@@ -216,7 +214,7 @@ public class FragmentThree extends Fragment {
     public void setDaumMapCurrentMarker(){
 
         MapPOIItem marker = new MapPOIItem();
-        marker.setItemName("현재 위치");
+        marker.setItemName(currentLocation);
         marker.setTag(0);
         marker.setMapPoint(MapPoint.mapPointWithGeoCoord(latitude, longitude));
         marker.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
@@ -278,7 +276,7 @@ public class FragmentThree extends Fragment {
 //                    + "\n고도 : " + altitude + "\n정확도 : "  + accuracy);
 
             // 위치 정보를 글로 나타낸다
-            txtCurrentPositionInfo.setText(currentLocation.toString());
+            //txtCurrentPositionInfo.setText(currentLocation.toString());
 
             // 지도를 움직인다
             setDaumMapCurrentLocation(latitude, longitude);
