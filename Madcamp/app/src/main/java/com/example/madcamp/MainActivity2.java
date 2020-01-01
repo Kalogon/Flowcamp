@@ -40,6 +40,8 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         setSupportActionBar(tb);
         getSupportActionBar().setDisplayShowCustomEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.nev_change);
 
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_CONTACTS)
@@ -104,7 +106,11 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         strGender = intent.getStringExtra("gender");
         strBirthday = intent.getStringExtra("birthday");*/
 
+
+
         tb.setTitle(strNickname);
+        tb.setTitleTextColor(Color.rgb(113,79,60));
+        tb.setTitleMarginStart(0);
         tb.setBackgroundColor(Color.rgb(255,177,0));
         /*tvNickname.setText(strNickname);
         tvProfile.setText(strProfile);*/
@@ -112,8 +118,6 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.btn_frag1).setOnClickListener(this);
         findViewById(R.id.btn_frag2).setOnClickListener(this);
         findViewById(R.id.btn_frag3).setOnClickListener(this);
-
-
     }
 
     @Override

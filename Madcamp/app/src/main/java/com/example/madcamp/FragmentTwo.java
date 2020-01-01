@@ -39,34 +39,34 @@ public class FragmentTwo extends Fragment {
 
         // 첫 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.niniz1),
-                "울고있는 앙몬드","content",R.drawable.niniz1) ;
+                "울고있는 앙몬드","엉엉엉..",R.drawable.niniz1) ;
         // 두 번째 아이템 추가.
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic1),
-                "애교부리는 라이언","content",R.drawable.g_pic1) ;
+                "애교부리는 라이언","애교뿜뿜!",R.drawable.g_pic1) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic2),
-                "공부하는 라이언","content",R.drawable.g_pic2) ;
+                "공부하는 라이언","무엇이든 물어보세용",R.drawable.g_pic2) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic3),
-                "베이비 어피치","content",R.drawable.g_pic3) ;
+                "베이비 어피치","응애응애",R.drawable.g_pic3) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic4),
-                "신난 앙몬드","content",R.drawable.g_pic4) ;
+                "신난 앙몬드","히히 신난당",R.drawable.g_pic4) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic5),
-                "코니와 무지","content",R.drawable.g_pic5) ;
+                "코니와 무지","하위하위",R.drawable.g_pic5) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic6),
-                "뿌듯한 스카피","content",R.drawable.g_pic6) ;
+                "뿌듯한 스카피","후훗^^",R.drawable.g_pic6) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic7),
-                "배고픈 스카피","content",R.drawable.g_pic7) ;
+                "배고픈 스카피","와구와구",R.drawable.g_pic7) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic8),
-                "튜브와 어피치","content",R.drawable.g_pic8) ;
+                "튜브와 어피치","헤헤",R.drawable.g_pic8) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic9),
-                "카카오 친구들","content",R.drawable.g_pic9) ;
+                "카카오 친구들","총총총..",R.drawable.g_pic9) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic10),
-                "유혹하는 라이언","content",R.drawable.g_pic10) ;
+                "유혹하는 라이언","나랑 놀래?",R.drawable.g_pic10) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic11),
-                "떨떠름한 튜브","content",R.drawable.g_pic11) ;
+                "떨떠름한 튜브","긁적긁적",R.drawable.g_pic11) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic12),
-                "튜브 괴롭히는 어피치","content",R.drawable.g_pic12) ;
+                "괴롭힘 당하는 튜브","귀찮..",R.drawable.g_pic12) ;
         adapter.addItem(ContextCompat.getDrawable(getContext(), R.drawable.g_pic13),
-                "꽃을 든 튜브","content",R.drawable.g_pic13) ;
+                "꽃을 든 튜브","흐음..",R.drawable.g_pic13) ;
 
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

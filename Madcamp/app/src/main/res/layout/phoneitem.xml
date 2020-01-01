@@ -22,6 +22,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/kakaootfregular"
+            android:textColor="#714F3C"
+            android:text="New Text"
             android:textSize="20sp"
             />
         <TextView
@@ -30,6 +35,10 @@
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:layout_gravity="center_vertical"
+            android:fontFamily="@font/kakaootfregular"
+            android:layout_marginLeft="20dp"
+            android:textColor="#714F3C"
+            android:text="New Text"
             android:textSize="13sp"
             />
 
@@ -40,6 +49,6 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center_vertical"
-        android:background="@drawable/call_btn"></Button>
+        android:background="@drawable/call_pic1"></Button>
 
 </LinearLayout>
