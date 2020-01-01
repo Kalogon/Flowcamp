@@ -67,6 +67,7 @@ public class FragmentThree extends Fragment {
                 Intent intent = new Intent(getContext(), weatherActivity.class);
                 intent.putExtra("latitude", latitude);
                 intent.putExtra("longitude", longitude);
+                intent.putExtra("currentLocation",currentLocation);
 // Activity 시작
                 startActivity(intent);
             }
@@ -302,24 +303,3 @@ public class FragmentThree extends Fragment {
     };
 }
 
-
-/*mEditTextQuery = (EditText) findViewById(R.id.editTextQuery); // 검색창
-        mButtonSearch = (Button) findViewById(R.id.buttonSearch); // 검색버튼
-        mButtonSearch.setOnClickListener(new OnClickListener() { // 검색버튼 클릭 이벤트 리스너
-            @Override public void onClick(View v) {
-                String query = mEditTextQuery.getText().toString();
-                if (query == null || query.length() == 0) {
-                    showToast("검색어를 입력하세요."); return; } hideSoftKeyboard(); // 키보드 숨김
-                GeoCoordinate geoCoordinate = mMapView.getMapCenterPoint().getMapPointGeoCoord();
-                double latitude = geoCoordinate.latitude; // 위도
-                double longitude = geoCoordinate.longitude; // 경도
-                int radius = 10000; // 중심 좌표부터의 반경거리. 특정 지역을 중심으로 검색하려고 할 경우 사용. meter 단위 (0 ~ 10000)
-                int page = 1; // 페이지 번호 (1 ~ 3). 한페이지에 15개
-                String apikey = MapApiConst.DAUM_MAPS_ANDROID_APP_API_KEY;
-                Searcher searcher = new Searcher(); // net.daum.android.map.openapi.search.Searcher
-                searcher.searchKeyword(getApplicationContext(), query, latitude, longitude, radius, page, apikey, new OnFinishSearchListener() {
-                    @Override public void onSuccess(List<Item> itemList) { mMapView.removeAllPOIItems(); // 기존 검색 결과 삭제
-                        showResult(itemList); // 검색 결과 보여줌
-                        }
-                        @Override
-                        public void onFail() { showToast("API_KEY의 제한 트래픽이 초과되었습니다."); } }); } });*/
