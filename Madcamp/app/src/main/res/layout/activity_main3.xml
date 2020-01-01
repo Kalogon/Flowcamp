@@ -21,7 +21,7 @@
         android:layout_height="200dp"
         android:layout_marginTop="100dp"
         android:layout_margin="83dp"
-       />
+        />
     <FrameLayout
         android:id="@+id/frag_container_"
         android:layout_width="match_parent"
@@ -37,39 +37,40 @@
             android:src="@drawable/profile_back" />
 
         <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="닉네임"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/kakaootfregular"
+            android:textSize="25sp"
 
-        android:textSize="25sp"
+            />
 
-        />
+        <TextView
+            android:id="@+id/ivNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="50sp"
+            android:text="단무지"
+            android:fontFamily="@font/kakaootfregular"
+            />
 
-    <TextView
-        android:id="@+id/ivNickname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center_horizontal"
-        android:textSize="50sp"
-        android:text="단무지"
-        />
 
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="120dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/button_background"
-        android:textColor="#FFFFFF"
-        android:textSize="17sp"
-        android:text="로그아웃"
-        />
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/button_background"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:fontFamily="@font/kakaootfregular"
+            android:text="로그아웃"
+            />
     </FrameLayout>
 </LinearLayout>
